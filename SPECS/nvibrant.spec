@@ -37,7 +37,8 @@ Note: A future, and intended way, will be through NVML, as evident by some nvidi
 %setup
 %setup -T -D -a 1 -q
 mv open-gpu-kernel-modules-%{nvidia_version}/* open-gpu
-
+%setup -T -D -a 2 -q
+mv nvibrant.service %{_unitdir}
 
 %build
 %meson
