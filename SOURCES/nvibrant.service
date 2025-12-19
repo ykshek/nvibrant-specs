@@ -1,0 +1,11 @@
+[Unit]
+Description=Apply nvibrant on startup
+After=graphical.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 5
+ExecStart=nvibrant 1023
+
+[Install]
+WantedBy=default.target

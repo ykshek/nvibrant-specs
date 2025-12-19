@@ -1,9 +1,10 @@
 %global forgeurl        https://github.com/Tremeschin/nvibrant
 %global nvidia_version  590.44.01
+%global _unitdir    /usr/lib/systemd/system/
 
 Name:           nvibrant
 Version:        1.1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Nvidia Digital Virbrance on Wayland
 
 %forgemeta
@@ -13,6 +14,7 @@ License:        GPL-3.0 AND MIT
 URL:            %{forgeurl}
 Source0:        %{forgesource}
 Source1:        https://github.com/NVIDIA/open-gpu-kernel-modules/archive/refs/tags/%{nvidia_version}.tar.gz
+Source2:        https://github.com/ykshek/nvibrant-specs/raw/refs/heads/main/SOURCES/nvibrant.service
 
 BuildRequires:  git
 BuildRequires:  gcc
@@ -50,9 +52,12 @@ mv open-gpu-kernel-modules-%{nvidia_version}/* open-gpu
 %license license.txt
 %doc readme.md
 %{_bindir}/%{name}
-
+%{_unitdir}/nvibrant.service
 
 
 %changelog
+* Fri Dec 19 2025 Alex Shek <hms.starryfish@gmail.com> - 1.1.0-2
+- Add example systemd service.
+
 * Fri Dec 19 2025 Alex Shek <hms.starryfish@gmail.com> - 1.1.0-1
 - Initial packaged version.
