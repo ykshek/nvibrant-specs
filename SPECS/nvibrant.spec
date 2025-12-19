@@ -16,6 +16,7 @@ Source1:        https://github.com/NVIDIA/open-gpu-kernel-modules/archive/refs/t
 
 BuildRequires:  git
 BuildRequires:  gcc
+BuildRequires:  gcc-c++
 BuildRequires:  meson
 
 # Requires:       python3
