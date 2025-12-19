@@ -8,4 +8,4 @@ ExecStartPre=/bin/sleep 5
 ExecStart=nvibrant 1023
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
