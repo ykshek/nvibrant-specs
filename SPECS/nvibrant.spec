@@ -1,6 +1,5 @@
 %global forgeurl        https://github.com/Tremeschin/nvibrant
 %global nvidia_version  590.44.01
-%global _unitdir    /usr/lib/systemd/system/
 
 Name:           nvibrant
 Version:        1.1.0
@@ -21,7 +20,6 @@ BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  meson
 
-# Requires:       python3
 
 %description
 NVIDIA GPUs have a nice feature called Digital Vibrance that increases the colors saturation of the display. The option is readily available on nvidia-settings in Linux, but is too coupled with libxnvctrl, making it softly "exclusive" to the X11 display server over wayland; but I paid for my pixels to glow :^)
@@ -37,8 +35,7 @@ Note: A future, and intended way, will be through NVML, as evident by some nvidi
 %setup
 %setup -T -D -a 1 -q
 mv open-gpu-kernel-modules-%{nvidia_version}/* open-gpu
-%setup -T -D -a 2 -q
-mv nvibrant.service %{_unitdir}
+
 
 %build
 %meson
@@ -53,12 +50,11 @@ mv nvibrant.service %{_unitdir}
 %license license.txt
 %doc readme.md
 %{_bindir}/%{name}
-%{_unitdir}/nvibrant.service
 
 
 %changelog
 * Fri Dec 19 2025 Alex Shek <hms.starryfish@gmail.com> - 1.1.0-2
-- Add example systemd service.
+- Removed systemd service, as they do not meet Fedora's preset policy.
 
 * Fri Dec 19 2025 Alex Shek <hms.starryfish@gmail.com> - 1.1.0-1
 - Initial packaged version.
