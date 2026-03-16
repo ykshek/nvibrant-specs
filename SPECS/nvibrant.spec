@@ -1,5 +1,5 @@
 %global forgeurl        https://github.com/Tremeschin/nvibrant
-%global nvidia_version  590.44.01
+%global nvidia_version  595.45.04
 
 Name:           nvibrant
 Version:        1.1.0
