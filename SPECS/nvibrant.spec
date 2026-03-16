@@ -2,8 +2,8 @@
 %global nvidia_version  595.45.04
 
 Name:           nvibrant
-Version:        1.1.0
-Release:        3%{?dist}
+Version:        1.2.0
+Release:        1%{?dist}
 Summary:        Nvidia Digital Virbrance on Wayland
 
 %forgemeta
