@@ -53,6 +53,9 @@ mv open-gpu-kernel-modules-%{nvidia_version}/* open-gpu
 
 
 %changelog
+* Mon Mar 16 2026 Alex Shek <hms.starryfish@gmail.com> - 1.2.0-1
+- Bump Version to 1.2.0, targeting the 595 driver.
+
 * Fri Dec 19 2025 Alex Shek <hms.starryfish@gmail.com> - 1.1.0-2
 - Removed systemd service, as they do not meet Fedora's preset policy.
 
