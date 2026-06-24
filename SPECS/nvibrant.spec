@@ -1,9 +1,9 @@
 %global forgeurl        https://github.com/Tremeschin/nvibrant
-%global nvidia_version  595.45.04
+%global nvidia_version  610.43.02
 
 Name:           nvibrant
 Version:        1.2.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Nvidia Digital Virbrance on Wayland
 
 %forgemeta
@@ -53,6 +53,9 @@ mv open-gpu-kernel-modules-%{nvidia_version}/* open-gpu
 
 
 %changelog
+* Wed Jun 24 2026 Alex Shek <hms.starryfish@gmail.com> - 1.2.0-2
+- Bump release, targeting 610.43.02.
+
 * Mon Mar 16 2026 Alex Shek <hms.starryfish@gmail.com> - 1.2.0-1
 - Bump Version to 1.2.0, targeting the 595 driver.
 
